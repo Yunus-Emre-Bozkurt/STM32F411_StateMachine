@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;DiscoF411_StateMachine/source/integration.h&apos; to &apos;1asdasd.h&apos;" description="Rename resource &apos;integration.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="source/integration.h" name="1asdasd.h" stamp="1710991250519" updateReferences="true"/>
+</session>

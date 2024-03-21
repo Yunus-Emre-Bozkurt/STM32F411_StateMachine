@@ -1,0 +1,5 @@
+../source/i2c_app.c:23:9:i2cMasterTransmitPoll	40	static
+../source/i2c_app.c:56:9:i2cMasterReceivePoll	40	static
+../source/i2c_app.c:85:9:i2cMemWritePoll	48	static
+../source/i2c_app.c:114:9:i2cMemReadPoll	48	static
+../source/i2c_app.c:141:6:i2cIsDeviceReady	32	static

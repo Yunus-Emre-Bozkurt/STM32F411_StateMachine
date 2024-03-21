@@ -5,13 +5,25 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../source/application.c 
+../source/application.c \
+../source/i2c_app.c \
+../source/systick.c \
+../source/timer.c \
+../source/uart_app.c 
 
 OBJS += \
-./source/application.o 
+./source/application.o \
+./source/i2c_app.o \
+./source/systick.o \
+./source/timer.o \
+./source/uart_app.o 
 
 C_DEPS += \
-./source/application.d 
+./source/application.d \
+./source/i2c_app.d \
+./source/systick.d \
+./source/timer.d \
+./source/uart_app.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +33,7 @@ source/%.o source/%.su source/%.cyclo: ../source/%.c source/subdir.mk
 clean: clean-source
 
 clean-source:
-	-$(RM) ./source/application.cyclo ./source/application.d ./source/application.o ./source/application.su
+	-$(RM) ./source/application.cyclo ./source/application.d ./source/application.o ./source/application.su ./source/i2c_app.cyclo ./source/i2c_app.d ./source/i2c_app.o ./source/i2c_app.su ./source/systick.cyclo ./source/systick.d ./source/systick.o ./source/systick.su ./source/timer.cyclo ./source/timer.d ./source/timer.o ./source/timer.su ./source/uart_app.cyclo ./source/uart_app.d ./source/uart_app.o ./source/uart_app.su
 
 .PHONY: clean-source
 

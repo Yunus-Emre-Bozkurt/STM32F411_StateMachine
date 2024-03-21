@@ -18,9 +18,11 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "dma.h"
 #include "i2c.h"
 #include "i2s.h"
 #include "spi.h"
+#include "usart.h"
 #include "usb_host.h"
 #include "gpio.h"
 
@@ -95,13 +97,16 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_I2C1_Init();
   MX_I2S2_Init();
   MX_I2S3_Init();
   MX_SPI1_Init();
   MX_USB_HOST_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
+  initializeApplication();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -112,6 +117,21 @@ int main(void)
     MX_USB_HOST_Process();
 
     /* USER CODE BEGIN 3 */
+    //while(appFunctionTable[currentState].function());	// This method can be applied when there is no declare "stateTransitionCondition" variable in appFunctionTable
+
+    controlTimer();
+    if(getTimerResultStatus(STATE_TIMER_TAG))
+    {
+    	appFunctionTable[currentState].stateTransitionCondition = TRUE;		//Set State Flag
+    }
+
+    if(appFunctionTable[currentState].stateTransitionCondition)
+    {
+    	appFunctionTable[currentState].stateTransitionCondition = FALSE;	//Clear State Flag
+    	appFunctionTable[currentState].function();
+    	startTimer(STATE_TIMER_TAG, 1000);			//timer re-initialize to 1 s
+    }
+
   }
   /* USER CODE END 3 */
 }

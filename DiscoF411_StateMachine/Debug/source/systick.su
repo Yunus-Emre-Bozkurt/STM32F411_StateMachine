@@ -1,0 +1,4 @@
+../source/systick.c:32:6:systickinit	8	static
+../source/systick.c:46:6:disableSystickInterrupt	4	static
+../source/systick.c:60:6:enableSystickInterrupt	4	static
+../source/systick.c:71:10:getSystickCount	8	static

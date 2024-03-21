@@ -1,0 +1,5 @@
+../source/application.c:24:9:initializeApplication	1
+../source/application.c:35:9:stateLED1	1
+../source/application.c:44:9:stateLED2	1
+../source/application.c:53:9:stateLED3	1
+../source/application.c:62:9:stateLED4	1

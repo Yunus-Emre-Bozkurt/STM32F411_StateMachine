@@ -1,0 +1,2 @@
+../source/uart_app.c:24:9:uartSendDMA	32	static
+../source/uart_app.c:85:9:uartReceiveDMA	32	static
