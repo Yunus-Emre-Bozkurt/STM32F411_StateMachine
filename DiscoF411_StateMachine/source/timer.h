@@ -28,9 +28,12 @@ typedef struct
 //!#pragma pack(pop)
 
 //	Function Prototypes
+void timerAppInit(void);
 void startTimer(uint8_t , uint32_t );
 void controlTimer(void);
 bool getTimerResultStatus(uint8_t );
+
+
 
 
 #endif /* TIMER_H_ */
