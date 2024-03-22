@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;DiscoF411_StateMachine/source/1asdasd.h&apos;" deleteContents="false" description="Delete resource &apos;DiscoF411_StateMachine/source/1asdasd.h&apos;" element1="/DiscoF411_StateMachine/source/1asdasd.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1710991294374"/>&#x0A;<refactoring comment="Delete 2 resources" deleteContents="false" description="Delete 2 resources" element1="/DiscoF411_StateMachine/source/uart_app.c" element2="/DiscoF411_StateMachine/source/uart_app.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="2" stamp="1711051761683"/>
-</session>

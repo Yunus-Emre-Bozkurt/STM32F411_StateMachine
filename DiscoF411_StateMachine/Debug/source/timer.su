@@ -1,3 +1,0 @@
-../source/timer.c:27:6:startTimer	24	static
-../source/timer.c:43:6:controlTimer	16	static
-../source/timer.c:72:6:getTimerResultStatus	24	static

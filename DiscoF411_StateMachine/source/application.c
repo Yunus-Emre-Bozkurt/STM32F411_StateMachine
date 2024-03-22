@@ -23,7 +23,7 @@ stateFunction_t appFunctionTable[FUNCTINON_SIZE] =
 
 uint8_t initializeApplication(void)
 {
-	systickinit();						//systick initialze
+	timerAppInit();						//systick initialze
 	startTimer(STATE_TIMER_TAG, 1000);	//timer initialize 1 s
 
 	currentState = stateLed1;			// initialze the state machine
