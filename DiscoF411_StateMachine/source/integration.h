@@ -13,7 +13,6 @@
 #include <stdlib.h>
 #include "main.h"
 
-#include "systick.h"
 #include "uart_app.h"
 #include "timer.h"
 #include "i2c_app.h"
