@@ -1,4 +1,0 @@
-../source/systick.c:32:6:systickinit	1
-../source/systick.c:46:6:disableSystickInterrupt	1
-../source/systick.c:60:6:enableSystickInterrupt	1
-../source/systick.c:71:10:getSystickCount	1

@@ -1,0 +1,8 @@
+../source/timer.c:26:6:timerAppInit	1
+../source/timer.c:44:6:startTimer	1
+../source/timer.c:60:6:controlTimer	4
+../source/timer.c:89:6:getTimerResultStatus	2
+../source/timer.c:128:6:systickinit	1
+../source/timer.c:142:6:disableSystickInterrupt	1
+../source/timer.c:156:6:enableSystickInterrupt	1
+../source/timer.c:167:10:getSystickCount	1

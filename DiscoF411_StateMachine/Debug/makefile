@@ -65,8 +65,8 @@ all: main-build
 main-build: DiscoF411_StateMachine.elf secondary-outputs
 
 # Tool invocations
-DiscoF411_StateMachine.elf DiscoF411_StateMachine.map: $(OBJS) $(USER_OBJS) C:\Users\Agrica\Desktop\DESKTOP\Projeler\StateMachine\DiscoF411_StateMachine\STM32F411VETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "DiscoF411_StateMachine.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Agrica\Desktop\DESKTOP\Projeler\StateMachine\DiscoF411_StateMachine\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DiscoF411_StateMachine.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+DiscoF411_StateMachine.elf DiscoF411_StateMachine.map: $(OBJS) $(USER_OBJS) C:\Users\Agrica\Desktop\DESKTOP\Projeler\StateMachine\work\STM32F411_StateMachine\DiscoF411_StateMachine\STM32F411VETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "DiscoF411_StateMachine.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Agrica\Desktop\DESKTOP\Projeler\StateMachine\work\STM32F411_StateMachine\DiscoF411_StateMachine\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DiscoF411_StateMachine.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
