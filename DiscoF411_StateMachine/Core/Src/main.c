@@ -107,6 +107,11 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   initializeApplication();
+
+
+  uint8_t rxBuffer[8];
+
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -132,7 +137,13 @@ int main(void)
     	appFunctionTable[currentState].function();
     	startTimer(STATE_TIMER_TAG, 1000);			//timer re-initialize to 1 s
     }
+    //! Starts DMA_RX Work here
 
+    uartReceiveDMA(&huart1, rxBuffer, 8);
+    uartSendDMA(&huart1, rxBuffer, 8);
+
+
+    //! Ends DMA_RX Work here
   }
   /* USER CODE END 3 */
 }

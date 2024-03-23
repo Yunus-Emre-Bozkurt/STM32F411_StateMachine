@@ -21,7 +21,7 @@
  * NOTE: huart->Instance->SR kontrolü her STM32 ürünü için geçerli değildir.
  * 		 farklı bir işlemciye geçilmesi durumunda sadece HAL_UART_Transmit_DMA() fonksiyonu kullanılmalıdır.
  */
-int32_t uartSendDMA(void *handle, const uint8_t *bufferPtr, uint8_t size)
+uint8_t uartSendDMA(void *handle, const uint8_t *bufferPtr, uint8_t size)
 {
 	int32_t ret = 0;
 
@@ -82,7 +82,7 @@ int32_t uartSendDMA(void *handle, const uint8_t *bufferPtr, uint8_t size)
  * NOTE2: huart->Instance->SR koşulunda veri tam zamanında alınamadığı testlerde görülmüştür.
  * 		sadece HAL_UART_Receive_DMA() fonksiyonu kullanılması düşünülebilir.
  */
-int32_t uartReceiveDMA(void *handle, uint8_t *bufferPtr, uint8_t size)
+uint8_t uartReceiveDMA(void *handle, uint8_t *bufferPtr, uint8_t size)
 {
 	//	if ((huart->Instance->SR) & (1<<5)) //! UART'ın Receive Complete Flag'ı kontrol edilir eğer alım tamamlanmış ise  mesaj okunur.
 	//	{

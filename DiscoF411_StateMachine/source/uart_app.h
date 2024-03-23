@@ -16,7 +16,7 @@
 
 
 
-int32_t uartSendDMA(void *, const uint8_t *, uint8_t);
-int32_t uartReceiveDMA(void *, uint8_t *, uint8_t);
+uint8_t uartSendDMA(void *, const uint8_t *, uint8_t);
+uint8_t uartReceiveDMA(void *, uint8_t *, uint8_t);
 
 #endif /* UART_APP_H_ */
